@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block body %}
+
+<style>
+    .login label{
+        
+       color: aqua;
+       display: block;
+    }
+    .login input{
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    .login ul {
+        color: #ffffff;
+        text-align:center ;
+        background-color:brown;
+        padding: 1em;
+        border-radius: 10px;
+        
+    }
+    .login ul li{
+        
+        list-style: none;
+    }
+</style>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12 login">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+  
+
+{% endblock %}
