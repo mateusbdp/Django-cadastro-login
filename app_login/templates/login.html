@@ -39,6 +39,8 @@ Home
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit">Entrar</button>
+                <p><a href="{% url 'password_reset' %}">auterar senha</a></p>
+
             </form>
         </div>
     </div>
